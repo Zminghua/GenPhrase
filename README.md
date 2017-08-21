@@ -19,7 +19,6 @@ File format
 ##### 1. 平行语料
 分离的文本文件，对应的行互为翻译
 
-<br>
 源文件
 ```
 He is one of my friends.
