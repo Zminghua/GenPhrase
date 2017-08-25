@@ -40,8 +40,8 @@ Rules
 ----------------------------
 ```
 multi_align：
-en_no_en：英文短语中不包含字母
-zh_no_zh：中文短语中不包含中文字
+en_no_en：   英文短语中不包含字母
+zh_no_zh：   中文短语中不包含中文字
 en_has_zhPunc：英文短语中有中文标点
 zh_has_enPunc：中文短语中有英文标点
 start_with_Punc：
