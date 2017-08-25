@@ -14,9 +14,9 @@ Description
 抽取阶段由anymalign.py来执行，如果run_align.sh中的run_anymalign变量设置为1，则启动抽取过程；
 可以根据需求，对anymalign的执行参数进行设定，包括短语的长度范围，采样时长和一次性加载的句对数量（语料较大，无法完全load的情况）等，
 详情见options文件。
-filter.py负责过滤操作，由run_filter控制是否启动；可以在filter_conf.json中配置过滤规则，
-每条rule在filter.py中有对应的执行函数，由judge函数循环调用。
-若新增过滤规则，首先在filter_conf.json中添加规则名和参数，然后在filter.py中实现过滤逻辑。
+filter.py负责过滤操作，由run_align.sh中的run_filter变量控制是否启动；可以在filter_conf.json中配置过滤规则，
+每条rule在filter.py中有对应的执行逻辑，由judge函数循环调用。
+若新增过滤规则，需在filter_conf.json中添加规则名和参数，然后在filter.py中实现过滤逻辑。
 
 File format
 ----------------------------
