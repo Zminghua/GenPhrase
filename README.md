@@ -39,21 +39,23 @@ a bunch of flowers \t 一束花 \t 0.98 0.86 \t 1.0 0.5 \t 1276
 Rules
 ----------------------------
 ```
-multi_align：          一对多对齐，选择翻译概率大于0.5的即可
-en_no_en：             英文短语中不包含字母
-zh_no_zh：             中文短语中不包含中文字
-en_has_zhPunc：        英文短语中有中文标点
-zh_has_enPunc：        中文短语中有英文标点
-start_with_Punc：      短语的开始字符是标点
-zh_start_with_special：中文短语以特殊词开始
-en_end_with_special：  英文短语以特殊单词结束
-en_paren_mismatch：    英文短语中括号不匹配
-zh_paren_mismatch：    中文短语中括号不匹配
-ptr_sum_low：          双向翻译概率的和小于阈值
-ptr_or_low：           存在一个方向的翻译概率小于阈值
-lexicalW_zero：        至少存在一个方向的lexical weight等于0
-len_diff：             中英文短语的长度比超出阈值
+multi_align：          一对多对齐，选择翻译概率大于0.5的即可，既可以保证是概率最大的翻译，同时可信度高；
+en_no_en：             英文短语中不包含字母；
+zh_no_zh：             中文短语中不包含中文字；
+en_has_zhPunc：        英文短语中有中文标点；
+zh_has_enPunc：        中文短语中有英文标点；
+start_with_Punc：      短语的开始字符是标点；
+zh_start_with_special：中文短语以特殊词开始，比如‘了’和‘的’；
+en_end_with_special：  英文短语以特殊单词结束，比如'the'；
+en_paren_mismatch：    英文短语中括号不匹配；
+zh_paren_mismatch：    中文短语中括号不匹配；
+ptr_sum_low：          双向翻译概率的和小于阈值；
+ptr_or_low：           存在一个方向的翻译概率小于阈值；
+lexicalW_zero：        至少存在一个方向的lexical权重等于0，虽然lexical权重波动较大，不过等于0的情况下大多数存在对齐偏差；
+len_diff：             中英文短语的长度比超出阈值，把长度差限定在合理的区间；
 ```
+备注：根据需求，可以变更括号匹配的类型；和标点相关的rule都可以，都可以配置相应的标点符号集；翻译概率的阈值调大，过滤会更严格，短语对的精度会提高，但是获取的短语数量会减少，可根据需求进行权衡。
+
 
 Usage
 ----------------------------
