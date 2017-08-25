@@ -39,20 +39,20 @@ a bunch of flowers \t 一束花 \t 0.98 0.86 \t 1.0 0.5 \t 1276
 Rules
 ----------------------------
 ```
-multi_align：
-en_no_en：   英文短语中不包含字母
-zh_no_zh：   中文短语中不包含中文字
-en_has_zhPunc：英文短语中有中文标点
-zh_has_enPunc：中文短语中有英文标点
-start_with_Punc：
-zh_start_with_special：
-en_end_with_special：
-en_paren_mismatch：
-zh_paren_mismatch：
-ptr_sum_low：
-ptr_or_low：
-lexicalW_zero：
-len_diff：
+multi_align：          一对多对齐，选择翻译概率大于0.5的即可
+en_no_en：             英文短语中不包含字母
+zh_no_zh：             中文短语中不包含中文字
+en_has_zhPunc：        英文短语中有中文标点
+zh_has_enPunc：        中文短语中有英文标点
+start_with_Punc：      短语的开始字符是标点
+zh_start_with_special：中文短语以特殊词开始
+en_end_with_special：  英文短语以特殊单词结束
+en_paren_mismatch：    英文短语中括号不匹配
+zh_paren_mismatch：    中文短语中括号不匹配
+ptr_sum_low：          双向翻译概率的和小于阈值
+ptr_or_low：           存在一个方向的翻译概率小于阈值
+lexicalW_zero：        至少存在一个方向的lexical weight等于0
+len_diff：             中英文短语的长度比超出阈值
 ```
 
 Usage
