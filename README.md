@@ -36,6 +36,25 @@ a bunch of flowers \t 一束花 \t 0.98 0.86 \t 1.0 0.5 \t 1276
 其中词汇权重和翻译概率均包含源到目标和目标到源的两个值，以空格分隔
 
 
+Rules
+----------------------------
+```
+multi_align
+en_no_en
+zh_no_zh
+en_has_zhPunc
+zh_has_enPunc
+start_with_Punc
+zh_start_with_special
+en_end_with_special
+en_paren_mismatch
+zh_paren_mismatch
+ptr_sum_low
+ptr_or_low
+lexicalW_zero
+len_diff
+```
+
 Usage
 ----------------------------
 ##### Requirements
